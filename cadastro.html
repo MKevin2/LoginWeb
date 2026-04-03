@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <form action="php/salvar.php" method="POST">
+
+        <h2>Cadastro</h2>
+
+        <input type="text" name="nome" placeholder="Nome" required>
+        <input type="text" name="cpf" placeholder="CPF" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+
+        <h3>Endereço</h3>
+
+        <input type="text" name="rua" placeholder="Rua" required>
+        <input type="number" name="numero" placeholder="Número" required>
+        <input type="text" name="complemento">
+        <input type="text" name="cep" placeholder="CEP" required>
+        <input type="text" name="bairro" placeholder="Bairro" required>
+        <input type="text" name="uf" placeholder="UF" required>
+
+        <button type="submit">Cadastrar</button>
+
+        </form>
+
+    </body>
+</html>
