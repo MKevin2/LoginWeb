@@ -5,7 +5,7 @@ CREATE TABLE usuario(
 	codCliente int primary key auto_increment,
     nome varchar(30) not null,
     senha VARCHAR(50) not null,
-    cpf varchar(11) not null unique
+    email VARCHAR(255) NOT NULL UNIQUE COLLATE utf8mb4_general_ci # Interpreta maiúsculos e minúsculos de forma igual
 );
 
 CREATE TABLE endereco(
@@ -21,23 +21,23 @@ CREATE TABLE endereco(
     FOREIGN KEY (codCliente) REFERENCES usuario(codCliente)
 );
 
-
+RENAME TABLE endereco TO tb_endereco;
+RENAME TABLE usuario TO tb_usuario;
 
 # Criando view para acesso às informações de forma segura, para não acessar diretamente as tabelas
 create view vw_perfil_cliente as
 select 
-	usuario.codCliente, 
-    usuario.nome,
-    usuario.senha,
-    usuario.cpf,
-    codEndereco,
+	tb_usuario.codCliente, 
+    tb_usuario.nome,
+    tb_usuario.senha,
+    tb_usuario.email,
     rua,
     numero,
     complemento,
     cep,
     bairro,
     uf
-from endereco
-	inner join usuario on usuario.codCliente = endereco.codCliente; 
+from tb_endereco
+	inner join tb_usuario on tb_usuario.codCliente = tb_endereco.codCliente; 
     
 select * from vw_perfil_cliente;

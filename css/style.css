@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e0a3f, #3a1c71, #0c2044);
+}
+
+/* Fonte */
+@font-face {
+    font-family: 'Lastica';
+    src: url('../font/Lastica.ttf') format('truetype');
+    font-weight: normal;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5em;
+    padding-left: 3em;
+}
+
+#content {
+    margin-left: 5em;
+    max-width: 500px;
+    flex-direction: column;
+    gap: 1em; 
+}
+
+.icon {
+    width: 20em;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+#title {
+    font-family: 'Lastica', sans-serif;
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+#description {
+    font-family: 'Calibri', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    text-align: justify;
+}
+
+.btnlogin {
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.login-btn {
+    font-family: 'Lastica';
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background: white;
+    color: #1e0a3f;
+    transition: 1s;
+}
+
+.login-btn:not(:hover) {
+    background: transparent;
+    color: white;
+    transition: 1s;
+
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img {
+    width: 80%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
