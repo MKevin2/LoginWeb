@@ -5,7 +5,7 @@ CREATE TABLE usuario(
 	codCliente int primary key auto_increment,
     nome varchar(30) not null,
     senha VARCHAR(50) not null,
-    email VARCHAR(255) NOT NULL UNIQUE COLLATE utf8mb4_general_ci # Interpreta maiúsculos e minúsculos de forma igual
+    cpf VARCHAR(11) NOT NULL UNIQUE
 );
 
 CREATE TABLE endereco(
@@ -30,7 +30,7 @@ select
 	tb_usuario.codCliente, 
     tb_usuario.nome,
     tb_usuario.senha,
-    tb_usuario.email,
+    tb_usuario.cpf,
     rua,
     numero,
     complemento,

@@ -59,6 +59,5 @@ body {
     <button onclick="window.location.href='../index.html'" id="btn">Tentar Novamente</button>
 </div>
 
-
 </body>
 </html>
