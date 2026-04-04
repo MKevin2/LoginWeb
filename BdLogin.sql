@@ -20,3 +20,24 @@ CREATE TABLE endereco(
     codCliente INT,
     FOREIGN KEY (codCliente) REFERENCES usuario(codCliente)
 );
+
+
+
+# Criando view para acesso às informações de forma segura, para não acessar diretamente as tabelas
+create view vw_perfil_cliente as
+select 
+	usuario.codCliente, 
+    usuario.nome,
+    usuario.senha,
+    usuario.cpf,
+    codEndereco,
+    rua,
+    numero,
+    complemento,
+    cep,
+    bairro,
+    uf
+from endereco
+	inner join usuario on usuario.codCliente = endereco.codCliente; 
+    
+select * from vw_perfil_cliente;

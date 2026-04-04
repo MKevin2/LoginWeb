@@ -2,10 +2,10 @@
     session_start();
     include("db.php");
 
-    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuario WHERE cpf='$cpf'";
+    $sql = "SELECT * FROM usuario WHERE email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
