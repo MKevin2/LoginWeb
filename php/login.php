@@ -2,10 +2,10 @@
     session_start();
     include("db.php");
 
-    $email = $_POST['email'];
+    $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuario WHERE email='$email'";
+    $sql = "SELECT * FROM vw_perfil_cliente WHERE cpf='$cpf'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -14,16 +14,16 @@
 
         if (password_verify($senha, $user['senha'])) {
 
-            $_SESSION['usuario'] = $user['nome'];
+            $_SESSION['tbusuario'] = $user['nome'];
             header("Location: home.php");
 
         } else {
-            echo "Senha incorreta!";
-            echo "<br><a href=../index.html>Voltar</a>";
+             header("Location: erro.php");
+            exit();
         }
 
     } else {
-        echo "Usuário não encontrado!";
-        echo "<br><a href=../index.html>Voltar</a>";
+        header("Location: usuario_nao_encontrado.php");
+    exit();
     }
 ?>

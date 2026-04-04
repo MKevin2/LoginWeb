@@ -4,20 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <div class="container">
+            <div class="left_login">
+                <div id="content_login">
+                
+                <form action="php/login.php" method="POST">
+                    <h2 id="title_2">Login</h2>
+                    <label for="cpf" class="label">CPF</label>
+                    <input type="text" name="cpf" placeholder="CPF" required><br>
+                    <label for="senha" class="label">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" required>
 
-        <form action="php/login.php" method="POST">
-            <h2>Login</h2>
+                    <br><button type="submit" class="login-btn">Entrar</button>
+                </form>
 
-            <input type="text" name="cpf" placeholder="CPF" required>
-            <input type="password" name="senha" placeholder="Senha" required>
+                <p id="description_2">Não tem uma conta? Cadastre-se AGORA!</p>
+                <a href="cadastro.html"><button class="login-btn">Cadastrar</button></a>
+            </div>
 
-            <button type="submit">Entrar</button>
+            <div class="right_login">
+    
+                <a href="landing.html"><img src="img/logo.png" alt="Ícone" class="icon"></a>
+                <img src="img/download.gif" alt="Imagem" class="main-img">
 
-            <a href="cadastro.html">Cadastrar</a>
-        </form>
+            </div>
 
+        </div>
     </body>
 </html>

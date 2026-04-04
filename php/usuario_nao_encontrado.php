@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usuário Não Encontrado</title>
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e0a3f, #3a1c71, #0c2044);
+    font-family: Arial;
+    color: white;
+}
+
+/* Fonte */
+@font-face {
+    font-family: 'Lastica';
+    src: url('../font/Lastica.ttf') format('truetype');
+    font-weight: normal;
+}
+
+.box {
+    background: rgba(155, 72, 72, 0.53);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+#btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lastica', sans-serif;
+}
+
+#btn:hover {
+    background-color: white;
+    color: #0c2044;
+    transition: 0.3s;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+    <h2 style="font-family: 'Lastica', sans-serif;">Falha no Login,<br>User inexistente!</h2>
+    <button onclick="window.location.href='../cadastro.html'" id="btn">Cadastrar</button>
+    <button onclick="window.location.href='../index.html'" id="btn">Tentar Novamente</button>
+</div>
+
+
+</body>
+</html>
