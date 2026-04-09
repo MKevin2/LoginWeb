@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Senha Incorreta</title>
+<link rel="icon" type="image/png" href="img/icon_40x40.png">
 <link rel="stylesheet" href="css/style.css">
 
 <style>

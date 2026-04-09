@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Sucesso</title>
+<link rel="icon" type="image/png" href="img/icon_40x40.png">
 
 <style>
 body {

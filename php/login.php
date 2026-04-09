@@ -23,7 +23,7 @@
         }
 
     } else {
-        header("Location: usuario_nao_encontrado.php");
+        header("Location: usuario_nao_encontrado.html");
     exit();
     }
 ?>
