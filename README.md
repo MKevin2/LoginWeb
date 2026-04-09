@@ -1,4 +1,5 @@
 # README - Instalação e Execução do Projeto
+<img src="https://github.com/MKevin2/LoginWeb/blob/main/img/page.jpeg" alt="Imagem da Home">
 
 ## Requisitos
 Antes de executar o projeto, é necessário ter instalado:
