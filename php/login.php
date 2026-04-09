@@ -14,7 +14,7 @@
 
         if (password_verify($senha, $user['senha'])) {
 
-            $_SESSION['tbusuario'] = $user['nome'];
+            $_SESSION['tb_usuario'] = $user['nome'];
             header("Location: home.php");
 
         } else {
