@@ -13,7 +13,7 @@
     $uf = $_POST['uf'];
 
     // Inserir usuário
-    $sqlUsuario = "INSERT INTO tb_usuario (nome, cpf, senha)
+    $sqlUsuario = "INSERT INTO usuario (nome, cpf, senha)
     VALUES ('$nome', '$cpf', '$senha')";
 
     if ($conn->query($sqlUsuario)) {
@@ -21,7 +21,7 @@
         $codCliente = $conn->insert_id;
 
         // Inserir endereço
-        $sqlEndereco = "INSERT INTO tb_endereco 
+        $sqlEndereco = "INSERT INTO endereco 
         (rua, numero, complemento, cep, bairro, uf, codCliente)
         VALUES 
         ('$rua', '$numero', '$complemento', '$cep', '$bairro', '$uf', '$codCliente')";

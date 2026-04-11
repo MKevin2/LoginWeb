@@ -3,27 +3,27 @@
     include("db.php");
 
     $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
+    $senha = trim($_POST['senha']);
 
-    $sql = "SELECT * FROM vw_perfil_cliente WHERE cpf='$cpf'";
+    $sql = "SELECT * FROM usuario WHERE cpf='$cpf'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
 
         $user = $result->fetch_assoc();
 
-        if (password_verify($senha, $user['senha'])) {
+       if ($senha === $user['senha']) {
 
-            $_SESSION['tb_usuario'] = $user['nome'];
+            $_SESSION['usuario'] = $user['nome'];
             header("Location: home.php");
 
         } else {
-             header("Location: erro.php");
+            header("Location: erro.php");
             exit();
         }
 
     } else {
         header("Location: usuario_nao_encontrado.html");
-    exit();
+        exit();
     }
 ?>
