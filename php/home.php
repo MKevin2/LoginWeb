@@ -7,6 +7,6 @@
     }
 ?>
 
-<h1>Bem-vindo, <?php echo $_SESSION['usuario']; ?>!</h1>
+<h1>Bem-vindo(a), <?php echo $_SESSION['usuario']; ?>!</h1>
 
 <a href="logout.php">Sair</a>
